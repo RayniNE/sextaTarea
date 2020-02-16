@@ -1,0 +1,33 @@
+﻿@model Ejercicio3.Models.Datos
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h1 class="text-center">Lista</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Color</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Chasis</th>
+        </tr>
+    </thead>    
+    <tbody>
+        @foreach(var vehiculo in Model.Vehiculos)
+        {
+            <tr>
+                <td>@vehiculo.Id</td>
+                <td>@vehiculo.Nombre</td>
+                <td>@vehiculo.Color</td>
+                <td>@vehiculo.Marca</td>
+                <td>@vehiculo.Chasis</td>
+            </tr>
+        }
+</table>
+<div class="text-align">
+    <a href="Index" class="btn btn-dark">Regresar</a>
+</div>
+
